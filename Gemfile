@@ -9,6 +9,9 @@ gem 'pg'
 # Adding pry to the rails console
 gem 'pry-rails'
 
+# Using devise for user login
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
