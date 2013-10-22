@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022001955) do
+ActiveRecord::Schema.define(version: 20131022225914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,9 +29,32 @@ ActiveRecord::Schema.define(version: 20131022001955) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "skill"
   end
 
   add_index "climbers", ["email"], name: "index_climbers_on_email", unique: true, using: :btree
   add_index "climbers", ["reset_password_token"], name: "index_climbers_on_reset_password_token", unique: true, using: :btree
+
+  create_table "problems", force: true do |t|
+    t.string   "type"
+    t.string   "rating"
+    t.string   "color"
+    t.integer  "rockgym_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "problems_id"
+  end
+
+  create_table "rockgyms", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
