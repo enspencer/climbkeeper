@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131023022112) do
+ActiveRecord::Schema.define(version: 20131023195138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,12 +37,12 @@ ActiveRecord::Schema.define(version: 20131023022112) do
   add_index "climbers", ["reset_password_token"], name: "index_climbers_on_reset_password_token", unique: true, using: :btree
 
   create_table "problems", force: true do |t|
-    t.string   "type"
     t.string   "rating"
     t.string   "color"
     t.integer  "rockgym_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "style"
   end
 
   create_table "reviews", force: true do |t|
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20131023022112) do
     t.datetime "updated_at"
     t.integer  "problem_id"
     t.integer  "climber_id"
+    t.integer  "rating"
   end
 
   create_table "rockgyms", force: true do |t|

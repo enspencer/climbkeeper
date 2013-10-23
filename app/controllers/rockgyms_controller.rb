@@ -4,4 +4,8 @@ class RockgymsController < ApplicationController
 		@rockgyms = Rockgym.all
 	end
 
+	def show
+		@rockgym = Rockgym.find(params[:id])
+	end
+
 end
