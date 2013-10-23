@@ -2,3 +2,10 @@
 <% @rockgyms.each do |rockgym| %>
 	<p><%= link_to "#{rockgym.name}", rockgym %></p>
 <% end %>
+
+<h3>Recent Reviews</h3>
+<% @reviews.each do |review| %>
+	<p><%= review.rockgym %></p>
+	<p><%= review.username %></p>
+	<p><%= review.body %></p>
+<% end %>
