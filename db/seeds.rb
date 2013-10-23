@@ -39,6 +39,9 @@ review12 = Review.create(body: "UGh.", rating: 3)
 review13 = Review.create(body: "I puked after.", rating: 3)
 review14 = Review.create(body: "Flashed it. Too easy.", rating: 2)
 
+bkbgym.problems << prob1 << prob2 << prob3 << prob4 << prob5 << prob6
+metrogym.problems << prob7 << prob8
+
 prob1.reviews << review01 << review02 << review03 << review04 << review05 << review06
 prob4.reviews << review07 << review08 << review09
 prob5.reviews << review10
@@ -52,7 +55,6 @@ three.reviews << review03 << review09
 four.reviews << review04
 five.reviews << review05
 
-bkbgym.problems << prob1 << prob2 << prob3 << prob4 << prob5 << prob6
-metrogym.problems << prob7 << prob8
+
 
 
