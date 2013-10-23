@@ -48,7 +48,8 @@ ActiveRecord::Schema.define(version: 20131023002825) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "problems_id"
+    t.integer  "problem_id"
+    t.integer  "climber_id"
   end
 
   create_table "rockgyms", force: true do |t|
