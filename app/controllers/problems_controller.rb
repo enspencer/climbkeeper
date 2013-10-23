@@ -1,3 +1,3 @@
-class ProblemsController < ActionController::Base
+class ProblemsController < ApplicationController
 
 end

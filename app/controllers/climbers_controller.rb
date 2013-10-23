@@ -1,3 +1,3 @@
-class ClimbersController < ActionController::Base
+class ClimbersController < ApplicationController
 
 end

@@ -1,3 +1,3 @@
-class ReviewsController < ActionController::Base
+class ReviewsController < ApplicationController
 
 end

@@ -1,4 +1,4 @@
-class RockgymsController < ActionController::Base
+class RockgymsController < ApplicationController
 
 	def index
 		@rockgyms = Rockgym.all
