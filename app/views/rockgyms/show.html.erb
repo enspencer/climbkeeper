@@ -1,14 +1,14 @@
 <h3><%= @rockgym.name %></h3>
-
+<div class="rockgym-show">
 <% @rockgym.problems.each do |problem| %>
-	<ul>
-		<li><%= problem.rating %></li>
-		<li><%= problem.color %></li>
-	</ul>
+	<p><%= problem.rating %>, <%= problem.color %></p>
+	<div class="problem-reviews">
 	<% problem.reviews.each do |review| %>
 		<ul>
-			<li><%= review.climber.username %></li>
-			<li><%= review.body %></li>
+			<li>username: <%= review.climber.username %></li>
+			<li>review: <%= review.body %></li>
 		</ul>
 	<% end %>
+	</div>
 <% end %>
+</div>
