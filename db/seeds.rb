@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Rockgym.create(name = "BKB Somerville", url = "http://www.bkbsomerville.com")
-Rockgym.create(name = "MetroRock", url = "http://www.metrorock.com")
+Rockgym.create(name: "BKB Somerville", url: "http://www.bkbsomerville.com")
+Rockgym.create(name: "MetroRock", url: "http://www.metrorock.com")
