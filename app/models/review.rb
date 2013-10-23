@@ -1,3 +1,3 @@
-class Review < ActiveController::Base
+class Review < ActiveRecord::Base
 
 end
