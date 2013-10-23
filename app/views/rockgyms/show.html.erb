@@ -1,1 +1,14 @@
 <h3><%= @rockgym.name %></h3>
+
+<% @rockgym.problems.each do |problem| %>
+	<ul>
+		<li><%= problem.rating %></li>
+		<li><%= problem.color %></li>
+	</ul>
+	<% problem.reviews.each do |review| %>
+		<ul>
+			<li><%= review.climber.username %></li>
+			<li><%= review.body %></li>
+		</ul>
+	<% end %>
+<% end %>
