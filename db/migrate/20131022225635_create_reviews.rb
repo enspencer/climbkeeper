@@ -3,7 +3,8 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.text :body
       t.timestamps
-      t.belongs_to :problems
+      t.belongs_to :problem
+      t.belongs_to :climber
     end
   end
 end
