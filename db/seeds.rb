@@ -20,7 +20,7 @@ prob2 = Problem.create(style: "boulder", rating: "V5+", color: "white")
 prob3 = Problem.create(style: "boulder", rating: "V1", color: "brown")
 prob4 = Problem.create(style: "top-rope", rating: "5.11", color: "neon yellow")
 prob5 = Problem.create(style: "top-rope", rating: "5.14b", color: "red/white")
-prob6 = Problem.create(style: "top-rope", rating: "5.13c", color: "orange")
+prob6 = Problem.create(style: "lead", rating: "5.13c", color: "orange")
 prob7 = Problem.create(style: "lead", rating: "5.10", color: "blue")
 prob8 = Problem.create(style: "lead", rating: "5.15a", color: "black and green")
 
@@ -37,10 +37,14 @@ review10 = Review.create(body: "The start is impossible.", rating: 5)
 review11 = Review.create(body: "Easier than rated.", rating: 1)
 review12 = Review.create(body: "UGh.", rating: 3)
 review13 = Review.create(body: "I puked after.", rating: 3)
-review14 = Review.create(body: "Super long.", rating: 4)
-review15 = Review.create(body: "Flashed it. Too easy.", rating: 2)
+review14 = Review.create(body: "Flashed it. Too easy.", rating: 2)
 
-prob1.reviews << review1 << review2 << review3 << review4 << review5 << review6
+prob1.reviews << review01 << review02 << review03 << review04 << review05 << review06
+prob4.reviews << review07  << review08 << review09
+prob5.reviews << review10
+prob6.reviews << review11
+prob7.reviews << review12 << review13
+prob8.reviews << review14
 
 bkbgym.problems << prob1 << prob2 << prob3 << prob4 << prob5 << prob6
 metrogym.problems << prob7 << prob8
