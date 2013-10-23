@@ -6,14 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Rockgym.create(name: "BKB Somerville", url: "http://www.bkbsomerville.com")
-Rockgym.create(name: "MetroRock", url: "http://www.metrorock.com")
+bkbgym = Rockgym.create(name: "BKB Somerville", url: "http://www.bkbsomerville.com")
+metrogym = Rockgym.create(name: "MetroRock", url: "http://www.metrorock.com")
 
-Climber.create(email: "one@wall.com", username: "one", skill: 1, password: "foobar88", password_confirmation: "foobar88")
-Climber.create(email: "two@wall.com", username: "two", skill: 2, password: "foobar88", password_confirmation: "foobar88")
-Climber.create(email: "three@wall.com", username: "three", skill: 3, password: "foobar88", password_confirmation: "foobar88")
-Climber.create(email: "four@wall.com", username: "four", skill: 4, password: "foobar88", password_confirmation: "foobar88")
-Climber.create(email: "five@wall.com", username: "five", skill: 5, password: "foobar88", password_confirmation: "foobar88")
+one = Climber.create(email: "one@wall.com", username: "one", skill: 1, password: "foobar88", password_confirmation: "foobar88")
+two = Climber.create(email: "two@wall.com", username: "two", skill: 2, password: "foobar88", password_confirmation: "foobar88")
+three = Climber.create(email: "three@wall.com", username: "three", skill: 3, password: "foobar88", password_confirmation: "foobar88")
+four = Climber.create(email: "four@wall.com", username: "four", skill: 4, password: "foobar88", password_confirmation: "foobar88")
+five = Climber.create(email: "five@wall.com", username: "five", skill: 5, password: "foobar88", password_confirmation: "foobar88")
 
 prob1 = Problem.create(style: "boulder", rating: "V10", color: "green")
 prob2 = Problem.create(style: "boulder", rating: "V5+", color: "white")
@@ -39,3 +39,10 @@ review12 = Review.create(body: "UGh.", rating: 3)
 review13 = Review.create(body: "I puked after.", rating: 3)
 review14 = Review.create(body: "Super long.", rating: 4)
 review15 = Review.create(body: "Flashed it. Too easy.", rating: 2)
+
+prob1.reviews << review1 << review2 << review3 << review4 << review5 << review6
+
+bkbgym.problems << prob1 << prob2 << prob3 << prob4 << prob5 << prob6
+metrogym.problems << prob7 << prob8
+
+
