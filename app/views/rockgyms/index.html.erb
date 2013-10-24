@@ -1,11 +1,18 @@
-<h3>Rockgyms</h3>
-<% @rockgyms.each do |rockgym| %>
-	<p><%= link_to "#{rockgym.name}", rockgym %></p>
-<% end %>
+<div class="rockgyms">
+	<h3>Rockgyms</h3>
+	<% @rockgyms.each do |rockgym| %>
+		<p><%= link_to "#{rockgym.name}", rockgym %></p>
+	<% end %>
+</div>
 
+<div class="reviews">
 <h3>Recent Reviews</h3>
-<% @reviews.each do |review| %>
-	<p><%= review.rockgym %></p>
-	<p><%= review.username %></p>
-	<p><%= review.body %></p>
-<% end %>
+	<% @reviews.each do |review| %>
+		<p><%= review.problem.rockgym.name %></p>
+		<ul>	
+			<li><%= review.climber.username %></li>
+			<li><%= review.body %></li>
+			<li><%= review.rating %></li>
+		</ul>
+	<% end %>
+</div>

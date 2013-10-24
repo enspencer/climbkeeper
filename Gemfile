@@ -9,6 +9,8 @@ gem 'pg'
 # Adding pry to the rails console
 gem 'pry-rails'
 
+gem 'paperclip'
+
 # Using devise for user login
 gem 'devise'
 
