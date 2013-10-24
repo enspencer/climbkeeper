@@ -3,7 +3,7 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 
 	# GET /reviews
 	def index
-		@reviews = review.all
+		@reviews = Review.all
 	end
 
 	# GET /reviews/:id
@@ -13,7 +13,7 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	private
 
 	def set_review
-		@review = review.find(params[:id])
+		@review = Review.find(params[:id])
 	end
 
 	def review_params
