@@ -1,14 +1,8 @@
 <h3><%= @rockgym.name %></h3>
 <div class="rockgym-show">
 <% @rockgym.problems.each do |problem| %>
-	<p><%= problem.rating %>, <%= problem.color %></p>
-	<div class="problem-reviews">
-	<% problem.reviews.each do |review| %>
-		<ul>
-			<li>username: <%= review.climber.username %></li>
-			<li>review: <%= review.body %></li>
-		</ul>
-	<% end %>
-	</div>
+
+	<%= render 'problems/show', :problem => problem %>
+
 <% end %>
 </div>

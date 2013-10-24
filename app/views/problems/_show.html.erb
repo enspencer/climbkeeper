@@ -1,0 +1,16 @@
+
+
+<div class="problem">
+
+<p>name: <%= problem.name %></p>
+<p>style: <%= problem.style %></p>
+<p>rating: <%= problem.rating %></p>
+<p>color: <%= problem.color %></p>
+</br>
+<% problem.reviews.each do |review| %>
+	<p>username:<%= review.climber.username %></p>
+	<p>rating:<%= review.rating %></p>
+	<p>review:<%= review.body %></p>
+</br>
+<% end %>
+</div>

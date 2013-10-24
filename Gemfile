@@ -11,6 +11,7 @@ gem 'pry-rails'
 
 gem 'paperclip'
 
+gem 'pry'
 # Using devise for user login
 gem 'devise'
 
