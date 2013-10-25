@@ -1,0 +1,5 @@
+<div class="review-form">
+	<%= form_for [@problem, @review] do |f| %>
+		<%= f.label 'Content' %><%= f.text_area :body %>
+	<%= f.submit 'new review!' %>
+</div>
