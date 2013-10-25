@@ -1,3 +1,5 @@
+<% if @rockgym.class != NilClass %>
+
 <h3><%= @rockgym.name %></h3>
 <div class="rockgym-show">
 <% @rockgym.problems.each do |problem| %>
@@ -10,3 +12,6 @@
 
 <%= render 'problems/form' %>
 
+<% else %>
+
+<% end %>
