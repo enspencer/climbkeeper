@@ -1,7 +1,9 @@
-<%= form_for [@rockgym, @problem] do |f| %>
-	<%= f.label :name %><%= f.text_field :name %>
-	<%= f.label :style %><%= f.text_field :style %>
-	<%= f.label :rating %><%= f.text_field :rating %>
-	<%= f.label :color %><%= f.text_field :color %>
-	<%= f.submit 'new!' %>
-<% end %>
+<div class="new-problem">
+	<%= form_for [@rockgym, @problem] do |f| %>
+		<%= f.label :name %><%= f.text_field :name %>
+		<%= f.label :style %><%= f.text_field :style %>
+		<%= f.label :rating %><%= f.text_field :rating %>
+		<%= f.label :color %><%= f.text_field :color %>
+		<%= f.submit 'new problem!' %>
+	<% end %>
+</div>
