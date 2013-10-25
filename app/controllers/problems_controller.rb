@@ -43,6 +43,6 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	end
 
 	def problem_params
-		params.permit[:problem]
+		params.require(:problem).permit[:name, :style, :color, :rating]
 	end
 end
