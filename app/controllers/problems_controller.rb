@@ -9,7 +9,7 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 
 	# GET /problems/:id
 	def show
-
+		@review = Review.new
 	end
 
 	def new

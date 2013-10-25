@@ -12,6 +12,8 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 
 	# GET /reviews/new
 	def new
+		@review = Review.new
+		@problem = Problem.find(params[:problem_id])
 	end
 
 	def create
