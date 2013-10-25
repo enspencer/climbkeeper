@@ -12,4 +12,6 @@
 
 </br>
 
-<%= render 'reviews/form' %>
+<% if climber_signed_in? %>
+	<%= render 'reviews/form' %>
+<% end %>
