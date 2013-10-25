@@ -1,5 +1,5 @@
 class ClimbersController < ApplicationController
-	before_action :set_climber, only: [:show, :edit, :update, :destroy]
+	before_action :set_climber, only: [:show]
 
 	# GET /climbers
 	def index
@@ -16,8 +16,8 @@ class ClimbersController < ApplicationController
 		@climber = Climber.find(params[:id])
 	end
 
-	def climber_params
-		params[:climber]
-	end
+	# def climber_params
+	# 	params.require(:climber).permit(:username, :skill)
+	# end
 
 end
