@@ -10,6 +10,13 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	def show
 	end
 
+	# GET /reviews/new
+	def new
+	end
+
+	def create
+	end
+
 	private
 
 	def set_review
