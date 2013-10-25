@@ -12,6 +12,14 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 
 	end
 
+	def new
+		@problem = Problem.new
+	end
+
+	def create
+		@problem = Problem.new(problem_params)
+	end
+
 	private
 
 	def set_problem
