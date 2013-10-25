@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20131024193824) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "style"
-    t.string   "name"
+    t.string   "name",       default: "no name!"
   end
 
   create_table "reviews", force: true do |t|
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20131024193824) do
     t.integer  "problem_id"
     t.integer  "climber_id"
     t.integer  "rating"
-    t.integer  "rockgym_id"
   end
 
   create_table "rockgyms", force: true do |t|
