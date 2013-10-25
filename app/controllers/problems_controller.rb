@@ -34,7 +34,6 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	    end
 	end
 
-
 	private
 
 	def set_problem
