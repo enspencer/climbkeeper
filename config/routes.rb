@@ -1,6 +1,7 @@
 Climbkeeper::Application.routes.draw do
   devise_for :climbers
 
+
   resources :rockgyms do
     resources :problems do
       resources :reviews
