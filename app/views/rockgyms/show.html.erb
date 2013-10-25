@@ -10,7 +10,12 @@
 <% end %>
 </div>
 
-<%= render 'problems/form' %>
+<% if climber_signed_in? %>
+
+	<%= render 'problems/form' %>
+
+<% else %>
+<% end %>
 
 <% else %>
 
