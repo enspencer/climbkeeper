@@ -10,4 +10,8 @@ class RockgymsController < ApplicationController
 		@new_problem = @rockgym.problems.build
 	end
 
+	def new
+		
+	end
+
 end
