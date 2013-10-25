@@ -22,15 +22,15 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	 	@rockgym = Rockgym.find(params[:rockgym_id])
 
 	    respond_to do |format|
-	      if @problem.save
-	       	@rockgym.problems << @problem
+			if @problem.save
+				@rockgym.problems << @problem
 
-	        format.html { redirect_to @problem, notice: 'problem was successfully created.' }
-	        format.json { render action: 'show', status: :created, location: @problem }
-	      else
-	        format.html { render action: 'new' }
-	        format.json { render json: @problem.errors, status: :unprocessable_entity }
-	      end
+				format.html { redirect_to @rockgym, notice: 'problem was successfully created.' }
+				format.json { render action: 'show', status: :created, location: @problem }
+			else
+				format.html { render action: 'new' }
+				format.json { render json: @problem.errors, status: :unprocessable_entity }
+			end
 	    end
 	end
 
@@ -43,6 +43,6 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	end
 
 	def problem_params
-		params.require(:problem).permit[:name, :style, :color, :rating]
+		params.require(:problem).permit(:name, :style, :color, :rating)
 	end
 end

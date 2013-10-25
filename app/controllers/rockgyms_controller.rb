@@ -7,7 +7,7 @@ class RockgymsController < ApplicationController
 
 	def show
 		@rockgym = Rockgym.find(params[:id])
-		@new_problem = @rockgym.problems.build
+		@problem = Problem.new
 	end
 
 	def new
