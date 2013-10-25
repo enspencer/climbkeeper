@@ -25,7 +25,7 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 			if @problem.save
 				@rockgym.problems << @problem
 
-				format.html { redirect_to @rockgym, notice: 'problem was successfully created.' }
+				format.html { redirect_to @rockgym, notice: 'Problem created!' }
 				format.json { render action: 'show', status: :created, location: @problem }
 			else
 				format.html { render action: 'new' }

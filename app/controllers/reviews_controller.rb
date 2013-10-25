@@ -15,6 +15,20 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	end
 
 	def create
+		@review = Review.new(review_params)
+	 	@problem = Problem.find(params[:problem_id])
+
+	    respond_to do |format|
+			if @review.save
+				@problem.reviews << @review
+
+				format.html { redirect_to @problem, notice: 'Review created!' }
+				format.json { render action: 'show', status: :created, location: @review }
+			else
+				format.html { render action: 'new' }
+				format.json { render json: @review.errors, status: :unprocessable_entity }
+			end
+	    end
 	end
 
 	private
@@ -24,6 +38,6 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	end
 
 	def review_params
-		params[:review]
+		params.require(:review).permit(:body)
 	end
 end
