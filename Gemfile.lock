@@ -140,7 +140,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-rails
-  paperclip
+  paperclip (~> 3.0)
   pg
   pry
   pry-rails

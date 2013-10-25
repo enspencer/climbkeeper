@@ -1,12 +1,11 @@
 Climbkeeper::Application.routes.draw do
   devise_for :climbers
 
-
-  resources :rockgyms do
-    resources :problems do
-      resources :reviews
+    resources :rockgyms do
+      resources :problems do
+        resources :reviews
+      end
     end
-  end
 
   resources :climbers do
     resources :reviews

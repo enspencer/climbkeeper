@@ -3,9 +3,13 @@
 <% @rockgym.problems.each do |problem| %>
 
 	<%= render 'problems/show', :problem => problem %>
-
+	<%= link_to 'View Problem', rockgym_problem_path(@rockgym, problem) %>
 <% end %>
 </div>
 
+<%= form_for @new_problem, new_rockgym_problem_path(@rockgym.id, @new_problem.id) do |f| %>
+	<%= f.text_area :name %>
+	<%= f.submit 'new!' %>
+<% end %>
 
-<%= link_to 'new problem', "/rockgyms/#{@rockgym.id}/problems/new" %>
+ <%# = link_to 'New Problem', new_rockgym_problem_path(@rockgym) %>

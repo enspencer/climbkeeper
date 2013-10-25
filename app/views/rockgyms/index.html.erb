@@ -10,9 +10,9 @@
 	<% @reviews.each do |review| %>
 		<p><%= review.problem.rockgym.name %></p>
 		<ul>	
-			<li><%= review.climber.username %></li>
-			<li><%= review.body %></li>
-			<li><%= review.rating %></li>
+			<li>username: <%= review.climber.username %></li>
+			<li>diff rating: <%= review.rating %></li>
+			<li>comment: <%= review.body %></li>
 		</ul>
 	<% end %>
 </div>

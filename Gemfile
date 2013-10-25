@@ -9,7 +9,7 @@ gem 'pg'
 # Adding pry to the rails console
 gem 'pry-rails'
 
-gem 'paperclip'
+gem 'paperclip', '~> 3.0'
 
 gem 'pry'
 # Using devise for user login
