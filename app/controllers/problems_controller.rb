@@ -53,10 +53,9 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	end
 
 	def destroy
-  	@rockgym = Rockgym.find(params[:rockgym_id])
-    @problem.destroy
-    respond_to do |format|
-      format.html { redirect_to rockgym_url(@rockgym) }
+		@problem.destroy
+		respond_to do |format|
+      format.html { redirect_to @problem.rockgym }
       format.json { head :no_content }
     end
   end

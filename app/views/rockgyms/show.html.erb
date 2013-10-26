@@ -10,7 +10,7 @@
 
 	<% if climber_signed_in? && (problem.climber == current_climber) %>	
 		<%= link_to 'Edit', edit_problem_path(problem) %>
-		<%= link_to 'Delete' %>
+		<%= link_to 'Delete', [problem.rockgym, problem], method: :delete, data: { confirm: 'Are you sure? All comments, including those from other climbers, will also be deleted.' } %>
 	<% else %>
 	<% end %>
 
