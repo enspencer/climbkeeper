@@ -6,8 +6,6 @@ class ClimbersController < ApplicationController
 		@climbers = Climber.all
 	end
 
-	def edit
-	end
 
 	# GET /climbers/:id
 	def show

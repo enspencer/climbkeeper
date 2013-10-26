@@ -1,6 +1,7 @@
 <div class="navbar">
-<p>climbkeeper
-<% if climber_signed_in? %>
+<p><%= link_to 'CLIMBKEEPER', rockgyms_path %></p>
+<p>
+	<% if climber_signed_in? %>
 		<%= link_to "log out", destroy_climber_session_path, method: 'delete' %>
 		<%= link_to "profile", edit_climber_registration_path %>
 		<%= current_climber.email %>
