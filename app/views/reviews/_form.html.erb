@@ -1,5 +1,5 @@
 <div class="review-form">
-	<%= form_for @review do |f| %>
+	<%= form_for [@problem, @climber, @review] do |f| %>
 		<%= f.label 'Content' %><%= f.text_area :body %>
 		<%= f.submit 'new review!' %>
 	<% end %>
