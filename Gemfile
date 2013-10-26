@@ -17,7 +17,7 @@ gem 'rails_12factor', group: :production
 gem 'paperclip', '~> 3.0'
 
 # Gem to use S3 with Paperclip
-gem 'aws-sdk', '~> 1.5.7'
+gem 'aws-sdk'
 
 gem 'pry'
 # Using devise for user login
