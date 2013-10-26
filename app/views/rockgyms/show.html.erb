@@ -2,7 +2,7 @@
 
 <h3><%= @rockgym.name %></h3>
 <div class="rockgym-show">
-<% @rockgym.problems.each do |problem| %>
+<% @rockgym.problems.order("created_at ASC").each do |problem| %>
 
 	<%= render 'problems/show', problem: problem %>
 

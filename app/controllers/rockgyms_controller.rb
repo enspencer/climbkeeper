@@ -9,6 +9,7 @@ class RockgymsController < ApplicationController
 		if Rockgym.all != []
 			@rockgym = Rockgym.find(params[:id])
 			@problem = Problem.new
+			# @problems = @rockgym.problems.order("created_at DESC")
 		else
 		end
 	end
