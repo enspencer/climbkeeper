@@ -9,7 +9,7 @@
 	<%= render 'reviews/show', review: review %>
 
 	<% if current_climber.email == review.climber.email %>
-		<%= link_to 'Edit', edit_problem_review_path(review.problem, review) %>
+		<%= link_to 'Delete', [review.problem, review], method: :delete, data: { confirm: 'Are you sure?' %>
 	<% else %>
 	<% end %>
 
