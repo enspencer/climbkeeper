@@ -19,6 +19,7 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	def create
 		@review = Review.new(review_params)
 	 	@problem = Problem.find(params[:problem_id])
+	 	@climber = current_climber
 
 	    respond_to do |format|
 			if @review.save
