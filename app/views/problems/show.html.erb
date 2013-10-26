@@ -4,7 +4,7 @@
 
 </br>
 
-<% @problem.reviews.each do |review| %>
+<% @problem.reviews.order("created_at DESC").each do |review| %>
 
 	<%= render 'reviews/show', review: review %>
 	<% if current_climber.email == review.climber.email %>
