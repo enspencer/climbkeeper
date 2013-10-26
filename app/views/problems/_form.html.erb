@@ -1,15 +1,18 @@
 <div class="problem-form">
-	<%= form_for [@rockgym, @climber, @problem] do |f| %>
+	<%= form_for [@rockgym, @climber, @problem], :html => { :multipart => true} do |f| %>
 		
 		<%= f.label :name %><%= f.text_field :name %>
 		<%= f.label :style %><%= f.text_field :style %>
 		<%= f.label :rating %><%= f.text_field :rating %>
 		<%= f.label :color %><%= f.text_field :color %>
+		<%= f.file_field :avatar %>		
 		
-		<%= form_for @problem, :url => problems_path, :html => { :multipart => true } do |form| %>
-	  	<%= form.file_field :avatar %>
-		<% end %>
 
 	<%= f.submit 'submit' %>
 	<% end %>
+
+<%# = form_for @problem, :url => problems_path, :html => { :multipart => true } do |form| %>
+	<%# = form.file_field :avatar %>
+<%#  end %>
+
 </div>
