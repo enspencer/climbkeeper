@@ -2,12 +2,12 @@
 
 	<%= form_for [@problem, @climber, @review] do |f| %>
 		<%= f.label 'Content' %><%= f.text_area :body %>
-		<%= f.label 'Rating Accuracy' %>
-		Way Easier:<%= f.radio_button :rating, 1 %>
-		A Little Easier:<%= f.radio_button :rating, 2 %>
-		Accurate:<%= f.radio_button :rating, 3 %>
-		A Little Easier:<%= f.radio_button :rating, 4 %>
-		Way Harder:<%= f.radio_button :rating, 5 %>
+		<%= f.label 'Compared to its rating, this route was...' %>
+		Way easier:<%= f.radio_button :rating_string, 'way too easy' %>
+		A little easier:<%= f.radio_button :rating_string, 'a little easy' %>
+		Right on:<%= f.radio_button :rating_string, 'just right' %>
+		A little harder:<%= f.radio_button :rating_string, 'a little hard' %>
+		Way Harder:<%= f.radio_button :rating_string, 'way too hard' %>
 
 		<%= f.submit 'submit' %>
 	<% end %>
