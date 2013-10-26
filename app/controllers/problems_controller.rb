@@ -23,10 +23,12 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	def create
 		@problem = Problem.new(problem_params)
 	 	@rockgym = Rockgym.find(params[:rockgym_id])
+	 	@climber = current_climber
 
 	    respond_to do |format|
 				if @problem.save
 					@rockgym.problems << @problem
+					@climber.problems << @problem
 
 					format.html { redirect_to @rockgym, notice: 'Problem created!' }
 					format.json { render action: 'show', status: :created, location: @problem }

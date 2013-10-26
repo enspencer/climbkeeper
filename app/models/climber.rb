@@ -5,6 +5,6 @@ class Climber < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :reviews
-  has_many :problems, through: :reviews
+  has_many :problems
 
 end
