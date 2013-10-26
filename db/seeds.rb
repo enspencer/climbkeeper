@@ -51,10 +51,12 @@ prob8.reviews << review14
 
 one.reviews << review01 << review07 << review10 << review11 << review12 << review14 << review06
 two.reviews << review02 << review08 << review13
-three.reviews << review03 << review09
+three.reviews << review03 << review09 << review14
 four.reviews << review04
 five.reviews << review05
 
-
+one.problems << prob1 << prob2 << prob3
+two.problems << prob4 << prob5 << prob6
+five.problems << prob7 << prob8
 
 

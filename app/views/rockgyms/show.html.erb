@@ -5,8 +5,13 @@
 <% @rockgym.problems.each do |problem| %>
 
 	<%= render 'problems/show', problem: problem %>
-	<%= link_to 'View', rockgym_problem_path(@rockgym, problem) %>
-	<%= link_to 'Edit', edit_problem_path(problem) %>
+
+	<% if problem.climber.email == current_climber.email %>
+		<%= link_to 'View', rockgym_problem_path(@rockgym, problem) %>
+		<%= link_to 'Edit', edit_problem_path(problem) %>
+		<%= link_to 'Delete' %>
+	<% else %>
+	<% end %>
 
 	</br>
 <% end %>
