@@ -24,6 +24,7 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	    respond_to do |format|
 			if @review.save
 				@problem.reviews << @review
+				@climber.reviews << @review
 
 				format.html { redirect_to @problem, notice: 'Review created!' }
 				format.json { render action: 'show', status: :created, location: @review }
