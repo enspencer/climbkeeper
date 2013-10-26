@@ -38,9 +38,10 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	end
 
 	def update
+		@rockgym = Rockgym.find(params[:rockgym_id])
 		respond_to do |format|
 			if @problem.update(problem_params)
-				format.html { redirect_to @problem, notice: 'Problem was updated.'}
+				format.html { redirect_to @rockgym, notice: 'Problem was updated.'}
 				format.json { head :no_content }
 			else
 				format.html { render action: 'edit' }
