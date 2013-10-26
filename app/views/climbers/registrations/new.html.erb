@@ -7,10 +7,10 @@
   <%= f.email_field :email, :autofocus => true %></div>
 
 	<div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
+  <%= f.text_field :username, required: true %></div>
 
 	<div><%= f.label :skill %><br />
-  <%= f.text_field :skill %></div>
+  <%= f.text_field :skill, required: true %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
