@@ -2,6 +2,7 @@
 <p>climbkeeper
 <% if climber_signed_in? %>
 		<%= link_to "log out", destroy_climber_session_path, method: 'delete' %>
+		<%= link_to "profile", edit_climber_registration_path %>
 		<%= current_climber.email %>
 	<% else %>
 		<%= link_to "log in", new_climber_session_path %>

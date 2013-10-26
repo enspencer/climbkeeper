@@ -53,6 +53,14 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
     end
 	end
 
+	def destroy
+		@review.destroy
+		respond_to do |format|
+      format.html { redirect_to @review.problem }
+      format.json { head :no_content }
+    end
+  end
+
 	private
 
 	def set_review
