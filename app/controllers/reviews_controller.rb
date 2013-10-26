@@ -16,6 +16,9 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 		@problem = Problem.find(params[:problem_id])
 	end
 
+	def edit
+	end
+	
 	def create
 		@review = Review.new(review_params)
 	 	@problem = Problem.find(params[:problem_id])
@@ -36,8 +39,9 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	end
 
 	def update
-		@problem = Problem.find(params[:rockgym_id])
-	
+		@problem = @review.problem
+		@climber = @review.climber
+
 		respond_to do |format|
 			if @review.update(review_params)
 				format.html { redirect_to @problem, notice: 'Review update!'}
