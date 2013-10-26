@@ -1,9 +1,15 @@
 <div class="problem-form">
 	<%= form_for [@rockgym, @climber, @problem] do |f| %>
+		
 		<%= f.label :name %><%= f.text_field :name %>
 		<%= f.label :style %><%= f.text_field :style %>
 		<%= f.label :rating %><%= f.text_field :rating %>
 		<%= f.label :color %><%= f.text_field :color %>
+		
+		<%= form_for @user, :url => users_path, :html => { :multipart => true } do |form| %>
+	  	<%= form.file_field :avatar %>
+		<% end %>
+
 	<%= f.submit 'submit' %>
 	<% end %>
 </div>
