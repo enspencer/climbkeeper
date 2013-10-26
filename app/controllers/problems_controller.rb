@@ -1,7 +1,7 @@
 class ProblemsController < ApplicationController
 
 before_action :set_problem, only: [:show, :edit, :update, :destroy]
-
+ 
 	# GET /problems
 	def index
 		@problems = Problem.all
@@ -17,21 +17,36 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 		@rockgym = Rockgym.find(params[:rockgym_id])
 	end
 
+	def edit
+	end
+
 	def create
 		@problem = Problem.new(problem_params)
 	 	@rockgym = Rockgym.find(params[:rockgym_id])
 
 	    respond_to do |format|
-			if @problem.save
-				@rockgym.problems << @problem
+				if @problem.save
+					@rockgym.problems << @problem
 
-				format.html { redirect_to @rockgym, notice: 'Problem created!' }
-				format.json { render action: 'show', status: :created, location: @problem }
-			else
-				format.html { render action: 'new' }
-				format.json { render json: @problem.errors, status: :unprocessable_entity }
-			end
+					format.html { redirect_to @rockgym, notice: 'Problem created!' }
+					format.json { render action: 'show', status: :created, location: @problem }
+				else
+					format.html { render action: 'new' }
+					format.json { render json: @problem.errors, status: :unprocessable_entity }
+				end
 	    end
+	end
+
+	def update
+		respond_to do |format|
+			if @problem.update(problem_params)
+				format.html { redirect_to @problem, notice: 'Problem was updated.'}
+				format.json { head :no_content }
+			else
+				format.html { render action: 'edit' }
+        format.json { render json: @problem.errors, status: :unprocessable_entity }
+      end
+    end
 	end
 
 	private
