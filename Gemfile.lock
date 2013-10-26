@@ -51,6 +51,9 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dotenv (0.9.0)
+    dotenv-rails (0.9.0)
+      dotenv (= 0.9.0)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -150,6 +153,7 @@ DEPENDENCIES
   aws-sdk
   coffee-rails (~> 4.0.0)
   devise
+  dotenv-rails
   jbuilder (~> 1.2)
   jquery-rails
   paperclip (~> 3.0)
