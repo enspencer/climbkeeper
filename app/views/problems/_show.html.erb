@@ -1,5 +1,10 @@
 
 <div class="problem">
+
+	<p><%= image_tag @user.avatar.url %></p>
+	<p><%= image_tag @user.avatar.url(:medium) %></p>
+	<p><%= image_tag @user.avatar.url(:thumb) %></p>
+
 	<p>name: <%= problem.name %></p>
 	<p>style: <%= problem.style %></p>
 	<p>rating: <%= problem.rating %></p>
