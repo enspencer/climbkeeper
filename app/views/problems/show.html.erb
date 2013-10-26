@@ -8,6 +8,12 @@
 
 	<%= render 'reviews/show', review: review %>
 
+	<% if current_climber.email == review.climber.email %>
+		<%= link_to 'Edit', edit_problem_review_path(review.problem, review) %>
+		<p>TEST</p>
+	<% else %>
+	<% end %>
+
 <% end %>
 
 </br>

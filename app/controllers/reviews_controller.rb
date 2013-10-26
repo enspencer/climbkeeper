@@ -35,6 +35,20 @@ before_action :set_review, only: [:show, :edit, :update, :destroy]
 	    end
 	end
 
+	def update
+		@problem = Problem.find(params[:rockgym_id])
+	
+		respond_to do |format|
+			if @review.update(review_params)
+				format.html { redirect_to @problem, notice: 'Review update!'}
+				format.json { head :no_content }
+			else
+				format.html { render action: 'edit' }
+        format.json { render json: @review.errors, status: :unprocessable_entity }
+      end
+    end
+	end
+
 	private
 
 	def set_review
