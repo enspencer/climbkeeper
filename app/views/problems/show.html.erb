@@ -7,7 +7,7 @@
 <% @problem.reviews.order("created_at DESC").each do |review| %>
 
 	<%= render 'reviews/show', review: review %>
-	<% if current_climber.email == review.climber.email %>
+	<% if climber_signed_in? && (current_climber.email == review.climber.email) %>
 		<%= link_to 'Delete', [review.problem, review], method: :delete, data: { confirm: 'Are you sure?' }%>
 	<% else %>
 	<% end %>
