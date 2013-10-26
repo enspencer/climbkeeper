@@ -1,9 +1,9 @@
 
 <div class="problem">
 
-	<p><%# = image_tag @problem.avatar.url %></p>
-	<p><%= image_tag @problem.avatar.url(:medium) %></p>
-	<p><%# = image_tag @problem.avatar.url(:thumb) %></p>
+	<p><%# = image_tag problem.avatar.url %></p>
+	<p><%= image_tag problem.avatar.url(:medium) %></p>
+	<p><%# = image_tag problem.avatar.url(:thumb) %></p>
 
 	<p>name: <%= problem.name %></p>
 	<p>style: <%= problem.style %></p>
