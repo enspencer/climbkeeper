@@ -13,6 +13,10 @@ gem 'pg'
 # Adding pry to the rails console
 gem 'pry-rails'
 
+# For word clouds
+
+gem 'jqcloud-rails'
+
 # For Heroku complaining less
 gem 'rails_12factor', group: :production
 
