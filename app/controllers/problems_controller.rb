@@ -10,6 +10,14 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	# GET /problems/:id
 	def show
 		@review = Review.new
+		@word_array = [
+			{text: "dino", weight: 7},
+			{text: "pinchy", weight: 3},
+			{text: "big holds", weight: 15},
+			{text: "crux", weight: 2},
+			{text: "BOMB!", weight: 12},
+			{text: "tall", weight: 4},
+		]
 	end
 
 	def new
