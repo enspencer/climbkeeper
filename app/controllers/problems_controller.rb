@@ -10,7 +10,7 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 	# GET /problems/:id
 	def show
 		@review = Review.new
-		@word_array = [
+		word_array = [
 			{text: "dino", weight: 7},
 			{text: "pinchy", weight: 3},
 			{text: "big holds", weight: 15},
@@ -18,6 +18,7 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 			{text: "BOMB!", weight: 12},
 			{text: "tall", weight: 4}
 		]
+		gon.word_array = word_array
 	end
 
 	def new
