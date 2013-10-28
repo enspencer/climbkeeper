@@ -35,6 +35,19 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= javascript_include_tag "application" %>
+    
+    var word_list = [
+       {text: "Lorem", weight: 15},
+       {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+       {text: "Dolor", weight: 6},
+       {text: "Sit", weight: 7},
+       {text: "Amet", weight: 5}
+       // ...other words
+    ];
+    $(document).ready(function() {
+      $("#wordcloud").jQCloud(word_list);
+    });
+
   </head>
   <body>
 
