@@ -44,6 +44,9 @@ gem 'jquery-rails'
 # For word clouds
 gem 'jqcloud-rails'
 
+# For passing rails variables to JQuery
+gem 'gon'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

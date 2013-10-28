@@ -13,20 +13,13 @@
       /*!
        * Create an array of word objects, each representing a word in the cloud
        */
-      var word_array = [
-        {text: "dino", weight: 7},
-        {text: "pinchy", weight: 3},
-        {text: "big holds", weight: 15},
-        {text: "crux", weight: 2},
-        {text: "BOMB!", weight: 12},
-        {text: "tall", weight: 4}
-      ];
+      var word_array = @word_array;
       $(document).ready(function() {
         // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
         $("#wordcloud").jQCloud(word_array);
       });
     </script>
-
+    <% binding.pry %>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
