@@ -10,7 +10,8 @@
 	<% @reviews.each do |review| %>
 		<p><%= review.problem.rockgym.name %></p>
 		<ul>	
-			<li>User <%= review.climber.username %></li>
+			<li>User: <%= review.climber.username %></li>
+			<li>Route: <%= review.problem.name %></li>
 			<li><%= review.body %></li>
 			<li>For its rating, this route was <%=review.rating_string%>.</li>
 		</ul>
