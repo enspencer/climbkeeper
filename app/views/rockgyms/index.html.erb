@@ -1,4 +1,4 @@
-<div class="rockgyms">
+<div class="rockgyms">	
 	<h3>Rockgyms</h3>
 	<% @rockgyms.each do |rockgym| %>
 		<p><%= link_to "#{rockgym.name}", rockgym %></p>
@@ -10,9 +10,9 @@
 	<% @reviews.each do |review| %>
 		<p><%= review.problem.rockgym.name %></p>
 		<ul>	
-			<li>username: <%= review.climber.username %></li>
-			<li>diff rating: <%= review.rating %></li>
-			<li>comment: <%= review.body %></li>
+			<li>User <%= review.climber.username %></li>
+			<li><%= review.body %></li>
+			<li>For its rating, this route was <%=review.rating_string%>.</li>
 		</ul>
 	<% end %>
 </div>
