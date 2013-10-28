@@ -16,7 +16,7 @@ before_action :set_problem, only: [:show, :edit, :update, :destroy]
 			{text: "big holds", weight: 15},
 			{text: "crux", weight: 2},
 			{text: "BOMB!", weight: 12},
-			{text: "tall", weight: 4},
+			{text: "tall", weight: 4}
 		]
 	end
 
