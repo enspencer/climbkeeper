@@ -6,5 +6,12 @@ FactoryGirl.define do
     rating "7"
     rockgym
     # climber
+
+    trait :with_problems do
+      after :create do |problem|
+      FactoryGirl.create_list :reviews, 4, problem: problem
+    end
+  end
+
   end  
 end

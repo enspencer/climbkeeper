@@ -11,7 +11,7 @@ describe Rockgym do
   end
 
   it 'should have problems' do
-    expect(@rockgym.problems.all.length).to eq(3)
+    expect(@rockgym.problems.length).to eq(3)
   end
   
 end
