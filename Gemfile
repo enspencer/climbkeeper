@@ -13,6 +13,14 @@ gem 'pg'
 # Adding pry to the rails console
 gem 'pry-rails'
 
+# Adding for testing
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
+
+gem "factory_girl_rails", "~> 4.0"
+
 # For Heroku complaining less
 gem 'rails_12factor', group: :production
 
