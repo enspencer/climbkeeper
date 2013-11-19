@@ -33,21 +33,7 @@ describe RockgymsController do
       it "creates a new Rockgym" do
         expect {FactoryGirl.create(:rockgym, :with_problems)}.to change(Rockgym, :count).by(1)
       end
-
-    # describe "with invalid params" do
-    #   it "assigns a newly created but unsaved gym as @rockgym" do
-    #     # Trigger the behavior that occurs when invalid params are submitted
-    #     Rockgym.any_instance.stub(:save).and_return(false)
-    #     post :create, {:rockgym => { "title" => "invalid value" }}
-    #     assigns(:rockgym).should be_a_new(Rockgym)
-    #   end
-
-    #   it "re-renders the 'new' template" do
-    #     # Trigger the behavior that occurs when invalid params are submitted
-    #     Post.any_instance.stub(:save).and_return(false)
-    #     post :create, {:post => { "title" => "invalid value" }}, valid_session
-    #     response.should render_template("new")
-    #   end
+      
   end
 end
 

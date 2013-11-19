@@ -8,11 +8,12 @@ describe ProblemsController do
     @problem = FactoryGirl.create(:problem, :with_reviews)
   end
 
-   describe "GET index" do
-    it "assigns all problems as @problems" do
-      get :index
-      assigns(:problems).should eq([problem])
-    end
+  #  describe "GET show" do
+  #   it "assigns all problems as @problems" do
+  #     get :show
+  #     assigns(:review).should be_a_new(Review)
+  #   end
+  # end
 
 
 end
