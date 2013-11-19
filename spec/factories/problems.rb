@@ -7,9 +7,9 @@ FactoryGirl.define do
     rockgym
     # climber
 
-    trait :with_problems do
+    trait :with_reviews do
       after :create do |problem|
-      FactoryGirl.create_list :reviews, 4, problem: problem
+      FactoryGirl.create_list :review, 4, problem: problem
     end
   end
 
